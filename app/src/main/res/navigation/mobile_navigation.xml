@@ -25,6 +25,11 @@
     <fragment
         android:id="@+id/fragment_contratantes"
         android:name="com.example.camellap.fragment_contratantes"
-        android:label="fragment_contratantes"
+        android:label="@string/menu_contratantes"
         tools:layout="@layout/fragment_contratantes" />
+    <fragment
+        android:id="@+id/fragment_personal"
+        android:name="com.example.camellap.fragment_personal"
+        android:label="@string/menu_personal"
+        tools:layout="@layout/fragment_personal" />
 </navigation>

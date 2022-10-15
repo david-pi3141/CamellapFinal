@@ -10,6 +10,8 @@
     <string name="menu_camellap">Camellap</string>
     <string name="menu_inventario">Inventario</string>
     <string name="menu_finanzas">Finanzas</string>
+    <string name="menu_contratantes">Contratantes</string>
+    <string name="menu_personal">Personal</string>
 
     <string name="text_calendario_eventos">Calendario de Eventos</string>
     <!-- TODO: Remove or change this placeholder text -->

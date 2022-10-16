@@ -9,15 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e4c0c1-7822-4e88-843a-aaf1437becc2" name="Changes" comment="Cambio de color del FloatinActionButtom fab a magenta, ademas de cambiar el logo que tiene">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+    <list default="true" id="36e4c0c1-7822-4e88-843a-aaf1437becc2" name="Changes" comment="Colocar la imagen de fondo en el laout de barra de tareas y quitarlo del fragment home">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665814412722</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Colocar la imagen de fondo en el laout de barra de tareas y quitarlo del fragment home">
+      <created>1665815262489</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665815262489</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,6 +236,7 @@
     <MESSAGE value="Nuevo proyecto con colores y logos requeridos, nuevo fragment" />
     <MESSAGE value="Se agregaron los fracmets de contratantes y personal, y se colocaron en el menu para que se puedan seleccionar" />
     <MESSAGE value="Cambio de color del FloatinActionButtom fab a magenta, ademas de cambiar el logo que tiene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio de color del FloatinActionButtom fab a magenta, ademas de cambiar el logo que tiene" />
+    <MESSAGE value="Colocar la imagen de fondo en el laout de barra de tareas y quitarlo del fragment home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Colocar la imagen de fondo en el laout de barra de tareas y quitarlo del fragment home" />
   </component>
 </project>

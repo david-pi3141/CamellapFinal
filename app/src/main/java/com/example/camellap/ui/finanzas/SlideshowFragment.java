@@ -10,18 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.camellap.databinding.FragmentSlideshowBinding;
+import com.example.camellap.databinding.FragmentFinanzasBinding;
 
 public class SlideshowFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentFinanzasBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SlideshowViewModel slideshowViewModel =
                 new ViewModelProvider(this).get(SlideshowViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentFinanzasBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         return root;

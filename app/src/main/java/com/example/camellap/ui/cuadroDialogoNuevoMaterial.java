@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.example.camellap.R;
 import com.example.camellap.ViewModel.Gerente;
-import com.example.camellap.ui.inventario.GalleryFragment;
 
 public class cuadroDialogoNuevoMaterial {
 

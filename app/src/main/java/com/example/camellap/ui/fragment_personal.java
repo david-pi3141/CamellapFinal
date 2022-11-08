@@ -1,12 +1,15 @@
 package com.example.camellap.ui;
 
+import static com.example.camellap.ui.MainActivity.gerente;
+
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.camellap.R;
+import com.example.camellap.databinding.FragmentContratantesBinding;
+import com.example.camellap.databinding.FragmentPersonalBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,10 +59,22 @@ public class fragment_personal extends Fragment {
         }
     }
 
+    private FragmentPersonalBinding binding;
+    fragment_personal contexto = this;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_personal, container, false);
+        binding = FragmentPersonalBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        binding.nuevoPersonal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new cuadroDialogoNuevoPersonal(contexto.getContext(),gerente);
+            }
+        });
+
+        return root;
     }
 }

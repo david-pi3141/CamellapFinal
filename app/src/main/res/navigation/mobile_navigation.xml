@@ -21,7 +21,7 @@
         android:id="@+id/nav_slideshow"
         android:name="com.example.camellap.ui.finanzas.SlideshowFragment"
         android:label="@string/menu_finanzas"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_finanzas" />
     <fragment
         android:id="@+id/fragment_contratantes"
         android:name="com.example.camellap.ui.fragment_contratantes"

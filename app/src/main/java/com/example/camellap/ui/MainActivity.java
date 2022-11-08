@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Menu;
 
 import com.example.camellap.R;
+import com.example.camellap.ViewModel.ClaseContratante;
 import com.example.camellap.ViewModel.ClaseEvento;
 import com.example.camellap.ViewModel.Gerente;
 import com.example.camellap.ui.camellap.HomeFragment;
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        gerente.contratantes.add(new ClaseContratante("Carlos","312","102012",true,"jsajsa"));
+        gerente.contratantes.add(new ClaseContratante("jose","4534463","102012",true,"jsajsa"));
 
         setSupportActionBar(binding.appBarMain.toolbar);
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {

@@ -14,13 +14,14 @@
             android:id="@+id/nuevo_contratante"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="20dp"
-            android:text="Button"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:text="@string/nuevo_contratante"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ListView
+            android:id="@+id/contratantes_list"
             android:layout_width="368dp"
             android:layout_height="604dp"
             app:layout_constraintBottom_toBottomOf="parent"

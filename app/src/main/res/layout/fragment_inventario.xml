@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/nuevo_material"
-        style="@android:style/Widget.DeviceDefault.Light.Button.Small"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"

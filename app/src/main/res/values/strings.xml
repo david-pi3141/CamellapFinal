@@ -14,7 +14,7 @@
     <string name="menu_personal">Personal</string>
 
     <string name="nuevo_evento">Ingrese datos del nuevo Evento</string>
-    <string name="fecha">Fecha</string>
+    <string name="fecha">Fecha(dd/mm/aaaa)</string>
     <string name="lugar">Lugar</string>
     <string name="costo">Costo</string>
     <string name="tematica">Tematica</string>
@@ -25,8 +25,23 @@
     <string name="catidad">Cantidad</string>
     <string name="nuevo_material_tiulo">Ingrese la informacion del nuevo material</string>
 
+    <string name="nuevo_contratante">Nuevo Contratante</string>
+    <string name="nuevo_contratante_tiulo">Ingrese la informacion del nuevo contratante</string>
+    <string name="nombre_contratante">Nombre del Contratante</string>
+    <string name="estado_contratante">Estado del pago</string>
+    <string name="infoevento_contratante">Informacion de Evento</string>
 
+    <string name="nuevo_personal">Nuevo Personal</string>
+    <string name="nuevo_personal_tiulo">Ingrese la informacion del nuevo personal</string>
+    <string name="nombre_personal">Nombre del Personal</string>
+    <string name="apodo_personal">Apodo</string>
+    <string name="experiencia_personal">Experiencia</string>
+    <string name="cargo_personal">Cargo</string>
 
+    <string name="contacto">Contacto</string>
+    <string name="identificacion">Identificacion</string>
+
+    <string name="nuevo_pago">Nuevo Pago</string>
 
     <string name="text_calendario_eventos">Calendario de Eventos</string>
     <!-- TODO: Remove or change this placeholder text -->

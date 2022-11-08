@@ -2,8 +2,6 @@ package com.example.camellap.ui;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -11,8 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.camellap.R;
-import com.example.camellap.ViewModel.ClaseEvento;
 import com.example.camellap.ViewModel.Gerente;
+import com.example.camellap.ui.inventario.GalleryFragment;
 
 public class cuadroDialogoNuevoEvento {
 

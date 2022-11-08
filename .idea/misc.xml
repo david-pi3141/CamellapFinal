@@ -10,9 +10,14 @@
         <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/fragment_contratantes.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/fragment_inventario.xml" value="0.22" />
+        <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/fragment_personal.xml" value="0.1" />
         <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
         <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/nav_header_main.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/nuevo_contratante_cuadro.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/nuevo_evento_cuadro.xml" value="0.25" />
+        <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/nuevo_material_cuadro.xml" value="0.25" />
+        <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/layout/nuevo_personal_cuadro.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/menu/activity_main_drawer.xml" value="0.175" />
         <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/menu/main.xml" value="0.2" />
         <entry key="..\:/Users/david/AndroidStudioProjects/Camellap/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />

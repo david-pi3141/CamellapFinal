@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
-    Gerente gerente = new Gerente("Carlos");
+    public static Gerente gerente = new Gerente("Carlos");
     Context contexto = this;
 
     @Override

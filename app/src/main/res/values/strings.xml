@@ -12,12 +12,20 @@
     <string name="menu_finanzas">Finanzas</string>
     <string name="menu_contratantes">Contratantes</string>
     <string name="menu_personal">Personal</string>
+
     <string name="nuevo_evento">Ingrese datos del nuevo Evento</string>
     <string name="fecha">Fecha</string>
     <string name="lugar">Lugar</string>
     <string name="costo">Costo</string>
     <string name="tematica">Tematica</string>
-    <string name="enviar_info">Enviar</string>
+    <string name="enviar_info">Crear</string>
+
+    <string name="nuevo_material">Nuevo Material</string>
+    <string name="material">Nombre del Material</string>
+    <string name="catidad">Cantidad</string>
+    <string name="nuevo_material_tiulo">Ingrese la informacion del nuevo material</string>
+
+
 
 
     <string name="text_calendario_eventos">Calendario de Eventos</string>

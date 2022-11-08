@@ -13,6 +13,9 @@ import java.util.Vector;
 public class Gerente {
     String nombre;
     public ArrayList<ClaseEvento> eventos = new ArrayList<ClaseEvento>();
+    public ArrayList<ClaseContratante> contratantes = new ArrayList<ClaseContratante>();
+    public ArrayList<ClasePersonal> personal = new ArrayList<ClasePersonal>();
+    public ArrayList<ClaseInventario> inventario = new ArrayList<ClaseInventario>();
 
 
     public Gerente(String nombre) {

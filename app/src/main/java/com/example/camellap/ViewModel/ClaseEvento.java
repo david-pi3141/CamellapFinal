@@ -1,5 +1,7 @@
 package com.example.camellap.ViewModel;
 
+import java.util.Date;
+
 public class ClaseEvento{
 
     //atributos
@@ -16,16 +18,14 @@ public class ClaseEvento{
         this.estadoPago = 0 ;
         this.lugar = "Salon platino Banquetes y recepciones la excelencia";
         this.tematica = "Sin tematica establecida";
-        this.fecha = "Sin fecha establecida"; //lo deje string porque no se que significa date osea se que date es fecha pero no se como escribirlo en codigo
+        this.fecha = "new Date(2022,11,07)"; //lo deje string porque no se que significa date osea se que date es fecha pero no se como escribirlo en codigo
     }
     //constructor con parametros
-    public ClaseEvento(float costo,float estadoPago, String lugar, String tematica, String fecha){
+    public ClaseEvento(float costo, String lugar, String tematica, String fecha){
         this.costo = costo;
-        this.estadoPago = estadoPago;
         this.lugar = lugar;
         this.tematica = tematica;
         this.fecha = fecha;
-
 
     }
 
@@ -54,11 +54,7 @@ public class ClaseEvento{
     public void setTematica(String tematica) {
         this.tematica = tematica;
     }
-    public String getFecha() {
-        return fecha;
-    }
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
+    public String getFecha() {return fecha;}
+    public void setFecha(String fecha) {this.fecha = fecha;}
     //metodos
 }

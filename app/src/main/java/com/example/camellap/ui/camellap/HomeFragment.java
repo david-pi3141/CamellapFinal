@@ -8,9 +8,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.camellap.R;
 import com.example.camellap.databinding.FragmentHomeBinding;
+import com.example.camellap.ui.fragment_personal;
 
 public class HomeFragment extends Fragment {
 

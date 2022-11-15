@@ -20,6 +20,8 @@
     <string name="tematica">Tematica</string>
     <string name="enviar_info">Crear</string>
 
+    <string name="guardar_info">Guardar</string>
+
     <string name="nuevo_material">Nuevo Material</string>
     <string name="material">Nombre del Material</string>
     <string name="catidad">Cantidad</string>

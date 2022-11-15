@@ -18,7 +18,7 @@ public class ClaseEvento{
         this.estadoPago = 0 ;
         this.lugar = "Salon platino Banquetes y recepciones la excelencia";
         this.tematica = "Sin tematica establecida";
-        this.fecha = "new Date(2022,11,07)"; //lo deje string porque no se que significa date osea se que date es fecha pero no se como escribirlo en codigo
+        this.fecha = "24/11/2022"; //lo deje string porque no se que significa date osea se que date es fecha pero no se como escribirlo en codigo
     }
     //constructor con parametros
     public ClaseEvento(float costo, String lugar, String tematica, String fecha){

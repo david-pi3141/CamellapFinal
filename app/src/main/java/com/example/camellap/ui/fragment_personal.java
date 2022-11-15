@@ -3,12 +3,12 @@ package com.example.camellap.ui;
 import static com.example.camellap.ui.MainActivity.gerente;
 
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.camellap.databinding.FragmentContratantesBinding;
+import androidx.fragment.app.Fragment;
+
 import com.example.camellap.databinding.FragmentPersonalBinding;
 
 /**

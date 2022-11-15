@@ -7,6 +7,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.camellap.R;
 import com.example.camellap.ViewModel.Gerente;
@@ -31,8 +32,13 @@ public class cuadroDialogoNuevoEvento {
         enviarInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gerente.nuevoEvento(Float.parseFloat(costo.getText().toString()),lugar.getText().toString(),tematica.getText().toString(),fecha.getText().toString());
-                dialogo.dismiss();
+               try {
+                   gerente.nuevoEvento(Float.parseFloat(costo.getText().toString()), lugar.getText().toString(), tematica.getText().toString(), fecha.getText().toString());
+                   dialogo.dismiss();
+               }catch (RuntimeException e){
+                   Toast.makeText(contexto,"No se ingresaron datos",Toast.LENGTH_LONG).show();
+                   dialogo.dismiss();
+               }
             }
         });
 

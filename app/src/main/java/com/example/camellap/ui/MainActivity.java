@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
         gerente.contratantes.add(new ClaseContratante("Carlos","312","102012",true,"jsajsa"));
         gerente.contratantes.add(new ClaseContratante("jose","4534463","102012",true,"jsajsa"));
+        gerente.eventos.add(new ClaseEvento());
 
-        setSupportActionBar(binding.appBarMain.toolbar);
+        setSupportActionBar(binding.appBarMain.barra);
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

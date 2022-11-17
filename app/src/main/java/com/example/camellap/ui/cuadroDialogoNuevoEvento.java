@@ -1,17 +1,20 @@
 package com.example.camellap.ui;
 
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.camellap.R;
 import com.example.camellap.ViewModel.Gerente;
-import com.example.camellap.ui.inventario.GalleryFragment;
+
+import java.util.Calendar;
 
 public class cuadroDialogoNuevoEvento {
 
@@ -36,9 +39,26 @@ public class cuadroDialogoNuevoEvento {
                    gerente.nuevoEvento(Float.parseFloat(costo.getText().toString()), lugar.getText().toString(), tematica.getText().toString(), fecha.getText().toString());
                    dialogo.dismiss();
                }catch (RuntimeException e){
-                   Toast.makeText(contexto,"No se ingresaron datos",Toast.LENGTH_LONG).show();
+                   Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
                    dialogo.dismiss();
                }
+            }
+        });
+
+        fecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar cal = Calendar.getInstance();
+                int año = cal.get(Calendar.YEAR);
+                int mes = cal.get(Calendar.MONTH);
+                int dia = cal.get(Calendar.DAY_OF_MONTH);
+                DatePickerDialog dpd = new DatePickerDialog(contexto, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        fecha.setText(dayOfMonth+"/"+(month+1)+"/"+year);
+                    }
+                },año,mes,dia);
+                dpd.show();
             }
         });
 

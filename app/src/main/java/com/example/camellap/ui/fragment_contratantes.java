@@ -76,6 +76,7 @@ public class fragment_contratantes extends Fragment {
 
     private FragmentContratantesBinding binding;
     fragment_contratantes contexto = this;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -83,11 +84,9 @@ public class fragment_contratantes extends Fragment {
 
         binding = FragmentContratantesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
         fragment_contratantes context = this;
         listViewContratantes = binding.contratantesList;
         CustomAdapter adapter = new CustomAdapter(this.getContext(),gerente.contratantes);
-
         listViewContratantes.setAdapter(adapter);
 
         listViewContratantes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -104,7 +103,7 @@ public class fragment_contratantes extends Fragment {
                 new cuadroDialogoNuevoContratante(contexto.getContext(),gerente);
             }
         });
-
         return root;
     }
+
 }

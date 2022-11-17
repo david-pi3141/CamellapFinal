@@ -33,6 +33,7 @@ public class cuadroDialogoNuevoPersonal {
         enviarInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                gerente.nuevoPersonal(nombre.getText().toString(),contacto.getText().toString(),apodo.getText().toString(),experiancia.getText().toString(),identificacion.getText().toString(),cargo.getText().toString());
                 dialogo.dismiss();
             }
         });

@@ -7,6 +7,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.camellap.R;
 import com.example.camellap.ViewModel.Gerente;
@@ -24,11 +25,12 @@ public class cuadroDialogoNuevoContratante {
         final EditText contacto = (EditText) dialogo.findViewById(R.id.contatocontratante);
         final EditText identificacion = (EditText) dialogo.findViewById(R.id.identificacioncontratante);
         final EditText estadopago = (EditText) dialogo.findViewById(R.id.estadopagocontratante);
-        final EditText infoevento = (EditText) dialogo.findViewById(R.id.infoeventocontratante);
 
         enviarInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                gerente.nuevoContratante(nombre.getText().toString(),contacto.getText().toString(),identificacion.getText().toString(), false);
+                Toast.makeText(contexto,"Creado",Toast.LENGTH_LONG).show();
                 dialogo.dismiss();
             }
         });

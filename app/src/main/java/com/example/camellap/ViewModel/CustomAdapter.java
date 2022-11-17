@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.camellap.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomAdapter extends BaseAdapter {
@@ -19,6 +20,10 @@ public class CustomAdapter extends BaseAdapter {
 
     public CustomAdapter(Context context, List<ClaseContratante> lst) {
         this.context = context;
+        this.lst = lst;
+    }
+
+    public void setLst(List<ClaseContratante> lst) {
         this.lst = lst;
     }
 
@@ -46,7 +51,7 @@ public class CustomAdapter extends BaseAdapter {
 
         ClaseContratante c = lst.get(position);
         if(convertView == null)
-            convertView = LayoutInflater.from(context).inflate(R.layout.informacio_contratantes,null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.informacion_mostrada,null);
 
         Nombre = convertView.findViewById(R.id.Nombre);
         Contacto = convertView.findViewById(R.id.Contacto);

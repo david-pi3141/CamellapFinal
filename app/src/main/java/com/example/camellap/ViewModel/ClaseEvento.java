@@ -12,14 +12,6 @@ public class ClaseEvento{
     String fecha;
 
     //constructores
-    //constructopr por defecto
-    public ClaseEvento(){
-        this.costo = 1000000 ;
-        this.estadoPago = 0 ;
-        this.lugar = "Salon platino Banquetes y recepciones la excelencia";
-        this.tematica = "Sin tematica establecida";
-        this.fecha = "24/11/2022"; //lo deje string porque no se que significa date osea se que date es fecha pero no se como escribirlo en codigo
-    }
     //constructor con parametros
     public ClaseEvento(float costo, String lugar, String tematica, String fecha){
         this.costo = costo;

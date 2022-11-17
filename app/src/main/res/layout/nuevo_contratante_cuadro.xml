@@ -6,12 +6,13 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="349dp"
-        android:layout_height="526dp"
+        android:layout_width="357dp"
+        android:layout_height="536dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497">
 
         <TextView
             android:id="@+id/tutulocontratantes"
@@ -64,20 +65,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/identificacioncontratante" />
 
-        <EditText
-            android:id="@+id/infoeventocontratante"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="@string/infoevento_contratante"
-            android:inputType="textMultiLine"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/estadopagocontratante" />
-
         <Button
             android:id="@+id/enviar"
             android:layout_width="wrap_content"
@@ -86,7 +73,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/infoeventocontratante" />
+            app:layout_constraintTop_toBottomOf="@+id/estadopagocontratante" />
 
         <EditText
             android:id="@+id/contatocontratante"

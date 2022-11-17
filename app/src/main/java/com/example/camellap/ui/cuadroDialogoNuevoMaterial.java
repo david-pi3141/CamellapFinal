@@ -28,7 +28,7 @@ public class cuadroDialogoNuevoMaterial {
             enviarInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //gerente.nuevoEvento(Float.parseFloat(costo.getText().toString()),lugar.getText().toString(),tematica.getText().toString(),fecha.getText().toString());
+                    gerente.crearInventario(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString()));
                     dialogo.dismiss();
                 }
             });

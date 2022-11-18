@@ -63,4 +63,9 @@ public class CustomAdapter extends BaseAdapter {
 
         return convertView;
     }
+
+    public void setData(List<ClaseContratante> contratantes) {
+        this.lst = contratantes;
+        notifyDataSetChanged();
+    }
 }

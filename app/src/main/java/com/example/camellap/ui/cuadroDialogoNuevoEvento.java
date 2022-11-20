@@ -1,5 +1,7 @@
 package com.example.camellap.ui;
 
+import static com.example.camellap.ui.MainActivity.gerente;
+
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -30,18 +32,31 @@ public class cuadroDialogoNuevoEvento {
         final EditText lugar = (EditText) dialogo.findViewById(R.id.lugar);
         final EditText costo = (EditText) dialogo.findViewById(R.id.costo);
         final EditText tematica = (EditText) dialogo.findViewById(R.id.tematica);
+        Button nuevoContr = (Button) dialogo.findViewById(R.id.CrearContrEvento);
 
 
         enviarInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                try {
-                   gerente.nuevoEvento(Float.parseFloat(costo.getText().toString()), lugar.getText().toString(), tematica.getText().toString(), fecha.getText().toString());
+                   gerente.nuevoEvento(Integer.parseInt(costo.getText().toString()), lugar.getText().toString(), tematica.getText().toString(), fecha.getText().toString());
                    dialogo.dismiss();
                }catch (RuntimeException e){
                    Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
                    dialogo.dismiss();
                }
+            }
+        });
+
+        nuevoContr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    new cuadroDialogoNuevoContratante(contexto,gerente);
+                    dialogo.dismiss();
+                }catch (RuntimeException e){
+                    dialogo.dismiss();
+                }
             }
         });
 

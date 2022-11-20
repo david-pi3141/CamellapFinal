@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(contexto.getContext(),fecha,Toast.LENGTH_SHORT).show();
                 for (int i = 0; i<gerente.eventos.size();i++){
                     if(gerente.eventos.get(i).getFecha().equals(fecha)){
-                        new cuadroMostrarEditarEvento(contexto.getContext());
+                        new cuadroMostrarEditarEvento(contexto.getContext(), gerente.eventos.get(i));
                         break;
                     }
                 }

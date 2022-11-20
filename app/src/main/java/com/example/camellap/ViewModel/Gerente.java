@@ -30,7 +30,7 @@ public class Gerente {
         this.nombre = nombre;
     }
     //metodos
-    public void nuevoEvento(float costo, String lugar, String tematica, String fecha){
+    public void nuevoEvento(int costo, String lugar, String tematica, String fecha){
         eventos.add(new ClaseEvento(costo,lugar,tematica,fecha));
         Log.d("ActivityMain","Hola");
     }

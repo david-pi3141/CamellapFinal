@@ -9,6 +9,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.camellap.R;
 import com.example.camellap.ViewModel.ClasePersonal;
@@ -34,8 +35,13 @@ public class cuadroDialogoNuevoPersonal {
         enviarInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragment_personal.personal.add(new ClasePersonal(nombre.getText().toString(),contacto.getText().toString(),apodo.getText().toString(),experiancia.getText().toString(),identificacion.getText().toString(),cargo.getText().toString()));
-                dialogo.dismiss();
+                try {
+                    fragment_personal.personal.add(new ClasePersonal(nombre.getText().toString(),contacto.getText().toString(),apodo.getText().toString(),experiancia.getText().toString(),identificacion.getText().toString(),cargo.getText().toString()));
+                    dialogo.dismiss();
+                }catch (RuntimeException e){
+                    Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
+                    dialogo.dismiss();
+                }
             }
         });
 

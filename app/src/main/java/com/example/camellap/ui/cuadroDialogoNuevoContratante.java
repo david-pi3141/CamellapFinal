@@ -14,32 +14,12 @@ import android.widget.Toast;
 
 import com.example.camellap.R;
 import com.example.camellap.ViewModel.ClaseContratante;
+import com.example.camellap.ViewModel.ClasePersonal;
 import com.example.camellap.ViewModel.CustomAdapter;
 import com.example.camellap.ViewModel.Gerente;
 import com.example.camellap.ui.camellap.HomeFragment;
 
 public class cuadroDialogoNuevoContratante {
-
-    String nom;
-    String cont;
-    String iden;
-    boolean estaP;
-
-    public String getNom() {
-        return nom;
-    }
-
-    public String getCont() {
-        return cont;
-    }
-
-    public String getIden() {
-        return iden;
-    }
-
-    public boolean isEstaP() {
-        return estaP;
-    }
 
     public cuadroDialogoNuevoContratante(Context contexto) {
         final Dialog dialogo = new Dialog(contexto);
@@ -57,13 +37,14 @@ public class cuadroDialogoNuevoContratante {
         enviarInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nom = nombre.getText().toString();
-                cont = contacto.getText().toString();
-                iden = identificacion.getText().toString();
-                estaP = false;
-                fragment_contratantes.contratantes.add(new ClaseContratante(nom,cont,iden,estaP));
-                Toast.makeText(contexto,"Creado",Toast.LENGTH_LONG).show();
-                dialogo.dismiss();
+                try {
+                    fragment_contratantes.contratantes.add(new ClaseContratante(nombre.getText().toString(),contacto.getText().toString(),identificacion.getText().toString(),false));
+                    Toast.makeText(contexto,"Creado",Toast.LENGTH_LONG).show();
+                    dialogo.dismiss();
+                }catch (RuntimeException e){
+                    Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
+                    dialogo.dismiss();
+                }
             }
         });
 

@@ -13,22 +13,22 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e4c0c1-7822-4e88-843a-aaf1437becc2" name="Changes" comment="Completar el cuadro de dialogo de mostrar evento.&#10;Colocar en el cudro de dialogo de crear evento el boton para crear contratante.">
+    <list default="true" id="36e4c0c1-7822-4e88-843a-aaf1437becc2" name="Changes" comment="Completar el listview de contratantes.">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/CustomAdapterInventario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/CustomAdapterPersonal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/ClaseContratante.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/ClaseContratante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/ClasePersona.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/ClasePersona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/Gerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoContratante.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoContratante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoEvento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoPersonal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoPersonal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/fragment_contratantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/fragment_contratantes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/fragment_personal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/fragment_personal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/inventario/GalleryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/inventario/GalleryFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_inventario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_inventario.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_personal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_personal.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668931810358</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Completar el listview de contratantes.">
+      <created>1668999966701</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668999966701</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -342,7 +349,8 @@
     <MESSAGE value="Crear el cuadro de dialogo para mostrar el evento al seleccionar una fecha.&#10;Y cuando no se coloque datos al crear evento entonces que se salga del cuadro de dialogo y salga una notificacion.&#10;Cambiar el nombre de la barra de herramientas(toolbar-&gt;barra)." />
     <MESSAGE value="Colocar el calendario para elegir la fecha del evento.&#10;Crear algunos metodos de gerente, que añaden objetos a los listados. Ademas de asociar estos metodos a botones de la interfaz." />
     <MESSAGE value="Completar el cuadro de dialogo de mostrar evento.&#10;Colocar en el cudro de dialogo de crear evento el boton para crear contratante." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completar el cuadro de dialogo de mostrar evento.&#10;Colocar en el cudro de dialogo de crear evento el boton para crear contratante." />
+    <MESSAGE value="Completar el listview de contratantes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completar el listview de contratantes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -108,10 +108,7 @@ public class fragment_contratantes extends Fragment {
         binding.nuevoContratante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("ActivityMain","Abrio el cuadro de dialogo");
-                cuadroDialogoNuevoContratante nvContr = new cuadroDialogoNuevoContratante(contexto.getContext());
-                adapter.notifyDataSetChanged();
-                Log.d("ActivityMain","Cerro el cuadro de dialogo");
+                new cuadroDialogoNuevoContratante(contexto.getContext());
             }
 
 

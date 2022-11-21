@@ -9,7 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.camellap.R;
+import com.example.camellap.ViewModel.ClaseInventario;
 import com.example.camellap.ViewModel.Gerente;
+import com.example.camellap.ui.inventario.GalleryFragment;
+import com.example.camellap.ui.inventario.GalleryViewModel;
 
 public class cuadroDialogoNuevoMaterial {
 
@@ -28,7 +31,7 @@ public class cuadroDialogoNuevoMaterial {
             enviarInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    gerente.crearInventario(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString()));
+                    GalleryFragment.inventario.add(new ClaseInventario(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString())));
                     dialogo.dismiss();
                 }
             });

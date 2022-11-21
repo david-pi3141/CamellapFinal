@@ -3,7 +3,7 @@ package com.example.camellap.ViewModel;
 public class ClaseContratante extends ClasePersona {
 
     //atributos
-    public boolean estadoPago ;
+    private boolean estadoPago ;
 
     //constructor con para metros
 
@@ -11,6 +11,7 @@ public class ClaseContratante extends ClasePersona {
         super(nombre, identificacion, contacto);
         this.estadoPago = estadoPago;
     }
+
     //getters and setters
 
     public boolean isEstadoPago() {

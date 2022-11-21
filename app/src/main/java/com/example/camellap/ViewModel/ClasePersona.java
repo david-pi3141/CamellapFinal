@@ -2,9 +2,9 @@ package com.example.camellap.ViewModel;
 
 public class ClasePersona{
     //atributos
-    public String nombre;
-    public String contacto;
-    public String identificacion;
+    protected String nombre;
+    protected String contacto;
+    protected String identificacion;
 
     //constructores
     //por default

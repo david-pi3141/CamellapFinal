@@ -52,7 +52,7 @@ public class cuadroDialogoNuevoEvento {
             @Override
             public void onClick(View v) {
                 try {
-                    new cuadroDialogoNuevoContratante(contexto,gerente);
+                    new cuadroDialogoNuevoContratante(contexto);
                     dialogo.dismiss();
                 }catch (RuntimeException e){
                     dialogo.dismiss();

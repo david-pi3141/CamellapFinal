@@ -32,22 +32,22 @@ public class Gerente {
     //metodos
     public void nuevoEvento(int costo, String lugar, String tematica, String fecha){
         eventos.add(new ClaseEvento(costo,lugar,tematica,fecha));
-        Log.d("ActivityMain","Hola");
+        Log.d("ActivityMain","Nuevo Evento");
     }
 
     public void nuevoContratante(String nombreC, String contacto, String identificacion, boolean estadoPagoC){
         contratantes.add(new ClaseContratante(nombreC,contacto,identificacion,estadoPagoC));
-        Log.d("ActivityMain","Hola");
+        Log.d("ActivityMain","Nuevo Contratante");
     }
 
     public void nuevoPersonal(String nombreP, String contactoP,String apodoP, String experP, String identificacionP, String cargoP){
         personal.add(new ClasePersonal(nombreP,contactoP,apodoP,experP,identificacionP,cargoP));
-        Log.d("ActivityMain","Hola");
+        Log.d("ActivityMain","Nuevo Personal");
     }
 
     public void crearInventario(String nombreM, int cantM){
         inventario.add(new ClaseInventario(nombreM,cantM));
-        Log.d("ActivityMain","Hola");
+        Log.d("ActivityMain","Nuevo Inventario");
     }
 
 }

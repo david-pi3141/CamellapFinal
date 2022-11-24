@@ -6,10 +6,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.camellap.ViewModel.ClaseContratante;
+import com.example.camellap.ViewModel.ClasePersonal;
+import com.example.camellap.ViewModel.CustomAdapter;
+import com.example.camellap.ViewModel.CustomAdapterPersonal;
+import com.example.camellap.databinding.FragmentContratantesBinding;
 import com.example.camellap.databinding.FragmentPersonalBinding;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +37,7 @@ public class fragment_personal extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    static ArrayList<ClasePersonal> personal = new ArrayList<>();
 
     /**
      * Use this factory method to create a new instance of
@@ -51,6 +62,15 @@ public class fragment_personal extends Fragment {
     }
 
     @Override
+    public void onDestroyView() {
+        for(int i = 0; i<personal.size();i++){
+            gerente.nuevoPersonal(personal.get(i).getNombre(), personal.get(i).getContacto(),personal.get(i).getApodo(),personal.get(i).getExperiencia(),personal.get(i).getIdentificacion(),personal.get(i).getCargo());
+        }
+        personal.clear();
+        super.onDestroyView();
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
@@ -61,12 +81,27 @@ public class fragment_personal extends Fragment {
 
     private FragmentPersonalBinding binding;
     fragment_personal contexto = this;
+    ListView listViewPersonal;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentPersonalBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        fragment_personal context = this;
+        listViewPersonal = binding.personalList;
+        CustomAdapterPersonal adapter = new CustomAdapterPersonal(this.getContext(),gerente.personal);
+        listViewPersonal.setAdapter(adapter);
+
+        listViewPersonal.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ClasePersonal c = gerente.personal.get(position);
+                Toast.makeText(context.getContext(),c.getNombre(),Toast.LENGTH_LONG).show();
+            }
+        });
+
+
 
         binding.nuevoPersonal.setOnClickListener(new View.OnClickListener() {
             @Override

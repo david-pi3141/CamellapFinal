@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +30,7 @@ public class cuadroDialogoNuevoContratante {
 
         Button enviarInfo = (Button) dialogo.findViewById(R.id.enviar);
         TextView titulo = (TextView) dialogo.findViewById(R.id.tutulocontratantes);
+        ImageButton salir = (ImageButton) dialogo.findViewById(R.id.salir);
         final EditText nombre = (EditText) dialogo.findViewById(R.id.nombrecontratante);
         final EditText contacto = (EditText) dialogo.findViewById(R.id.contatocontratante);
         final EditText identificacion = (EditText) dialogo.findViewById(R.id.identificacioncontratante);
@@ -47,7 +49,12 @@ public class cuadroDialogoNuevoContratante {
                 }
             }
         });
-
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogo.dismiss();
+            }
+        });
         dialogo.show();
     }
 }

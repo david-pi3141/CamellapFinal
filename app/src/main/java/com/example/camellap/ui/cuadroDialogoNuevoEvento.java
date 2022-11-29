@@ -10,6 +10,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ public class cuadroDialogoNuevoEvento {
 
         Button enviarInfo = (Button) dialogo.findViewById(R.id.enviarinfo);
         TextView titulo = (TextView) dialogo.findViewById(R.id.titulo);
+        ImageButton salir = (ImageButton) dialogo.findViewById(R.id.salir);
         final EditText fecha = (EditText) dialogo.findViewById(R.id.fecha);
         final EditText lugar = (EditText) dialogo.findViewById(R.id.lugar);
         final EditText costo = (EditText) dialogo.findViewById(R.id.costo);
@@ -76,7 +78,12 @@ public class cuadroDialogoNuevoEvento {
                 dpd.show();
             }
         });
-
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogo.dismiss();
+            }
+        });
         dialogo.show();
     }
 }

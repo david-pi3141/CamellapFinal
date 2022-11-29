@@ -16,7 +16,6 @@ import com.example.camellap.ViewModel.ClaseContratante;
 import com.example.camellap.ViewModel.ClasePersonal;
 import com.example.camellap.ViewModel.CustomAdapter;
 import com.example.camellap.ViewModel.CustomAdapterPersonal;
-import com.example.camellap.databinding.FragmentContratantesBinding;
 import com.example.camellap.databinding.FragmentPersonalBinding;
 
 import java.util.ArrayList;

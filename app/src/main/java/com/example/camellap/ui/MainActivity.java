@@ -2,21 +2,14 @@ package com.example.camellap.ui;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 
 import com.example.camellap.R;
-import com.example.camellap.ViewModel.ClaseContratante;
-import com.example.camellap.ViewModel.ClaseEvento;
 import com.example.camellap.ViewModel.Gerente;
-import com.example.camellap.ui.camellap.HomeFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -55,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.fragment_contratantes, R.id.fragment_personal)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.fragment_contratantes, R.id.fragment_personal, R.id.fragment_basedatos)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class cuadroDialogoNuevoMaterial {
 
             Button enviarInfo = (Button) dialogo.findViewById(R.id.enviar_material);
             TextView titulo = (TextView) dialogo.findViewById(R.id.textView);
+            ImageButton salir = (ImageButton) dialogo.findViewById(R.id.salir);
             final EditText nombreMaterial = (EditText) dialogo.findViewById(R.id.nombre_material);
             final EditText cantidad = (EditText) dialogo.findViewById(R.id.cantidad_material);
 
@@ -41,7 +43,12 @@ public class cuadroDialogoNuevoMaterial {
                     }
                 }
             });
-
+            salir.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialogo.dismiss();
+                }
+            });
             dialogo.show();
         }
 

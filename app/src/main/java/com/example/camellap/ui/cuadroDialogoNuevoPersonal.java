@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ public class cuadroDialogoNuevoPersonal {
 
         Button enviarInfo = (Button) dialogo.findViewById(R.id.enviarinfopersonal);
         TextView titulo = (TextView) dialogo.findViewById(R.id.titulopersonal);
+        ImageButton salir = (ImageButton) dialogo.findViewById(R.id.salir);
         final EditText nombre = (EditText) dialogo.findViewById(R.id.nombrepersonal);
         final EditText contacto = (EditText) dialogo.findViewById(R.id.contactopersonal);
         final EditText apodo = (EditText) dialogo.findViewById(R.id.apodopersonal);
@@ -44,7 +46,12 @@ public class cuadroDialogoNuevoPersonal {
                 }
             }
         });
-
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogo.dismiss();
+            }
+        });
         dialogo.show();
     }
 }

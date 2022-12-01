@@ -99,7 +99,7 @@ public class DbCamellap extends DbHelper {
             values.put("cargopersonal", cargopersonal);
 
 
-            id = db.insert(TABLE_CONTRATANTE, null, values);
+            id = db.insert(TABLE_PERSONAL, null, values);
         } catch (Exception ex) {
             ex.toString();
         }

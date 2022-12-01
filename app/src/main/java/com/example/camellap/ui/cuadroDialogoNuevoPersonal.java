@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.camellap.R;
 import com.example.camellap.ViewModel.ClasePersonal;
 import com.example.camellap.ViewModel.Gerente;
+import com.example.camellap.db.DbCamellap;
 
 public class cuadroDialogoNuevoPersonal {
     public cuadroDialogoNuevoPersonal(Context contexto, Gerente gerente) {
@@ -37,12 +38,20 @@ public class cuadroDialogoNuevoPersonal {
         enviarInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    fragment_personal.personal.add(new ClasePersonal(nombre.getText().toString(),contacto.getText().toString(),apodo.getText().toString(),experiancia.getText().toString(),identificacion.getText().toString(),cargo.getText().toString()));
-                    dialogo.dismiss();
-                }catch (RuntimeException e){
-                    Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
-                    dialogo.dismiss();
+                if(!nombre.getText().toString().equals("") && !contacto.getText().toString().equals("") && !apodo.getText().toString().equals("") && !experiancia.getText().toString().equals("") && !identificacion.getText().toString().equals("") && !cargo.getText().toString().equals("")) {
+
+                    DbCamellap dbContactos = new DbCamellap(contexto);
+                    long id = dbContactos.insertarPersonal(nombre.getText().toString(), contacto.getText().toString(), apodo.getText().toString(),experiancia.getText().toString(), identificacion.getText().toString(), cargo.getText().toString());
+
+                    if (id > 0) {
+                        Toast.makeText(contexto, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
+                        dialogo.dismiss();
+                    } else {
+                        Toast.makeText(contexto, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
+                        dialogo.dismiss();
+                    }
+                } else {
+                    Toast.makeText(contexto, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
                 }
             }
         });

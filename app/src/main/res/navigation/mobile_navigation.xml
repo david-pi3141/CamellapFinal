@@ -28,11 +28,6 @@
         android:label="@string/menu_contratantes"
         tools:layout="@layout/fragment_contratantes" />
     <fragment
-        android:id="@+id/fragment_basedatos"
-        android:name="com.example.camellap.db.fragment_basedatos"
-        android:label="@string/menu_basedatos"
-        tools:layout="@layout/fragment_basedatos" />
-    <fragment
         android:id="@+id/fragment_personal"
         android:name="com.example.camellap.ui.fragment_personal"
         android:label="@string/menu_personal"

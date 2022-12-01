@@ -9,7 +9,10 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
+import com.example.camellap.ViewModel.ClaseContratante;
+import com.example.camellap.ViewModel.ClaseEvento;
 import com.example.camellap.ViewModel.ClaseInventario;
+import com.example.camellap.ViewModel.ClasePersonal;
 
 public class DbCamellap extends DbHelper {
 
@@ -120,7 +123,13 @@ public class DbCamellap extends DbHelper {
 
 
         ClaseInventario inventarios;
+        ClasePersonal personal;
+        ClaseContratante contratantes;
+        ClaseEvento eventos;
         Cursor cursorInventario;
+        Cursor cursorContratante;
+        Cursor cursorEvento;
+        Cursor cursorPersonal;
 
         cursorInventario = db.rawQuery("SELECT * FROM " + TABLE_INVENTARIO, null);
 
@@ -132,7 +141,40 @@ public class DbCamellap extends DbHelper {
             } while (cursorInventario.moveToNext());
         }
 
+
+        cursorContratante = db.rawQuery("SELECT * FROM " + TABLE_CONTRATANTE, null);
+        if (cursorContratante.moveToFirst()) {
+            do {
+                contratantes = new ClaseContratante((cursorContratante.getString(1)), cursorContratante.getString(2),cursorContratante.getString(3),Boolean.valueOf(cursorContratante.getString(4)));
+
+                gerente.contratantes.add(contratantes);
+            } while (cursorContratante.moveToNext());
+        }
+
         cursorInventario.close();
 
+
+        cursorEvento = db.rawQuery("SELECT * FROM " + TABLE_EVENTO, null);
+        if (cursorEvento.moveToFirst()) {
+            do {
+                eventos = new ClaseEvento((cursorEvento.getInt(1)), cursorEvento.getString(2),cursorEvento.getString(3),cursorEvento.getString(4));
+
+                gerente.eventos.add(eventos);
+            } while (cursorEvento.moveToNext());
+        }
+
+        cursorEvento.close();
+
+
+        cursorPersonal = db.rawQuery("SELECT * FROM " + TABLE_PERSONAL, null);
+        if (cursorPersonal.moveToFirst()) {
+            do {
+                personal = new ClasePersonal((cursorPersonal.getString(1)), cursorPersonal.getString(2),cursorPersonal.getString(3),cursorPersonal.getString(4), (cursorPersonal.getString(5)), (cursorPersonal.getString(6)));
+
+                gerente.personal.add(personal);
+            } while (cursorPersonal.moveToNext());
+        }
+
+        cursorPersonal.close();
     }
 }

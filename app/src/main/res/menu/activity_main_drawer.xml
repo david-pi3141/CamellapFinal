@@ -24,9 +24,5 @@
             android:id="@+id/fragment_personal"
             android:icon="?android:attr/listChoiceIndicatorSingle"
             android:title="@string/menu_personal" />
-        <item
-            android:id="@+id/fragment_basedatos"
-            android:icon="?android:attr/listChoiceIndicatorSingle"
-            android:title="@string/menu_basedatos" />
     </group>
 </menu>

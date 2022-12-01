@@ -59,4 +59,52 @@ public class DbCamellap extends DbHelper {
         return id;
 
     }
+    public long insertarContratante(String nombrecontratante, String contatocontratante, String identificacioncontratante, String estadopagocontratante) {
+
+        long id = 0;
+
+        try {
+            DbHelper dbHelper = new DbHelper(context);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+            values.put("nombrecontratante", nombrecontratante);
+            values.put("contatocontratante", contatocontratante);
+            values.put("identificacioncontratante", identificacioncontratante);
+            values.put("estadopagocontratante", estadopagocontratante);
+
+
+            id = db.insert(TABLE_CONTRATANTE, null, values);
+        } catch (Exception ex) {
+            ex.toString();
+        }
+
+        return id;
+
+    }
+    public long insertarPersonal(String nombrepersonal, String contactopersonal, String apodopersonal, String experienciapersonal, String identificacionpersonal, String cargopersonal) {
+
+        long id = 0;
+
+        try {
+            DbHelper dbHelper = new DbHelper(context);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+            values.put("nombrepersonal", nombrepersonal);
+            values.put("contactopersonal", contactopersonal);
+            values.put("apodopersonal", apodopersonal);
+            values.put("experienciapersonal", experienciapersonal);
+            values.put("identificacionpersonal", identificacionpersonal);
+            values.put("cargopersonal", cargopersonal);
+
+
+            id = db.insert(TABLE_CONTRATANTE, null, values);
+        } catch (Exception ex) {
+            ex.toString();
+        }
+
+        return id;
+
+    }
 }

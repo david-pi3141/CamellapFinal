@@ -18,6 +18,7 @@ import com.example.camellap.ViewModel.ClaseContratante;
 import com.example.camellap.ViewModel.ClasePersonal;
 import com.example.camellap.ViewModel.CustomAdapter;
 import com.example.camellap.ViewModel.Gerente;
+import com.example.camellap.db.DbCamellap;
 import com.example.camellap.ui.camellap.HomeFragment;
 
 public class cuadroDialogoNuevoContratante {
@@ -39,13 +40,20 @@ public class cuadroDialogoNuevoContratante {
         enviarInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    fragment_contratantes.contratantes.add(new ClaseContratante(nombre.getText().toString(),contacto.getText().toString(),identificacion.getText().toString(),false));
-                    Toast.makeText(contexto,"Creado",Toast.LENGTH_LONG).show();
-                    dialogo.dismiss();
-                }catch (RuntimeException e){
-                    Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
-                    dialogo.dismiss();
+                if(!nombre.getText().toString().equals("") && !contacto.getText().toString().equals("") && !identificacion.getText().toString().equals("") && !estadopago.getText().toString().equals("")) {
+
+                    DbCamellap dbContactos = new DbCamellap(contexto);
+                    long id = dbContactos.insertarContratante(nombre.getText().toString(), contacto.getText().toString(), identificacion.getText().toString(),estadopago.getText().toString());
+
+                    if (id > 0) {
+                        Toast.makeText(contexto, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
+                        dialogo.dismiss();
+                    } else {
+                        Toast.makeText(contexto, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
+                        dialogo.dismiss();
+                    }
+                } else {
+                    Toast.makeText(contexto, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -1,8 +1,8 @@
 package com.example.camellap.ViewModel;
 
 public class ClaseInventario {
-    String nombreElemnto;
-    int cantidad;
+    private String nombreElemnto;
+    private int cantidad;
 
     public ClaseInventario(String nombreElemnto, int cantidad) {
         this.nombreElemnto = nombreElemnto;

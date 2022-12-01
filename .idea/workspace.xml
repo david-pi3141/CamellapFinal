@@ -13,9 +13,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e4c0c1-7822-4e88-843a-aaf1437becc2" name="Changes" comment="bASE DE DATOS Y CAMBIOS EN LOS CUADROS DE DIALOGO">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/CustomAdapterEventos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/db/DbCamellap.java" afterDir="false" />
+    <list default="true" id="36e4c0c1-7822-4e88-843a-aaf1437becc2" name="Changes" comment="Agrega datos a la tabla MATERIAL.">
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
@@ -24,12 +22,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/ClaseEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ViewModel/ClaseEvento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/db/DbCamellap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/db/DbCamellap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/db/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/db/DbHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoMaterial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroMostrarEditarEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroMostrarEditarEvento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/finanzas/SlideshowFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/finanzas/SlideshowFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_finanzas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_finanzas.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/camellap/ui/cuadroDialogoNuevoEvento.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669753735996</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Agrega datos a la tabla MATERIAL.">
+      <created>1669855171983</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669855171984</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -377,7 +379,8 @@
     <MESSAGE value="Completar el listview de contratantes." />
     <MESSAGE value="Completar el listview de personal.&#10;Completar el listview de inventario.&#10;Centrar el nombre de la informacion presentada en los listview." />
     <MESSAGE value="bASE DE DATOS Y CAMBIOS EN LOS CUADROS DE DIALOGO" />
-    <option name="LAST_COMMIT_MESSAGE" value="bASE DE DATOS Y CAMBIOS EN LOS CUADROS DE DIALOGO" />
+    <MESSAGE value="Agrega datos a la tabla MATERIAL." />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrega datos a la tabla MATERIAL." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -36,4 +36,27 @@ public class DbCamellap extends DbHelper {
         return id;
 
     }
+    public long insertarEvento(String fecha, String lugar, String costo, String tematica) {
+
+        long id = 0;
+
+        try {
+            DbHelper dbHelper = new DbHelper(context);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+            values.put("fecha", fecha);
+            values.put("lugar", lugar);
+            values.put("costo", costo);
+            values.put("tematica", tematica);
+
+
+            id = db.insert(TABLE_EVENTO, null, values);
+        } catch (Exception ex) {
+            ex.toString();
+        }
+
+        return id;
+
+    }
 }

@@ -61,7 +61,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
-        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_INVENTARIO);
+        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_EVENTO);
         onCreate(sqLiteDatabase);
 
     }

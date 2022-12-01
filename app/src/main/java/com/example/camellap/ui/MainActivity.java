@@ -7,6 +7,7 @@ import android.view.Menu;
 
 import com.example.camellap.R;
 import com.example.camellap.ViewModel.Gerente;
+import com.example.camellap.db.DbCamellap;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static Gerente gerente = new Gerente("Carlos");
     Context contexto = this;
+    DbCamellap datos = new DbCamellap(contexto);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.barra);
+
+        datos.obtenerInfo();
+
         binding.appBarMain.nuevoevento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

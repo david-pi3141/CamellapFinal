@@ -42,6 +42,7 @@ public class cuadroDialogoNuevoMaterial {
 
 
                         long id = dbContactos.insertarMaterial(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString()));
+                        GalleryFragment.inventario.add(new ClaseInventario(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString())));
 
                         if (id > 0) {
                             Toast.makeText(contexto, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();

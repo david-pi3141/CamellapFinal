@@ -55,6 +55,15 @@ public class cuadroDialogoNuevoContratante {
                 } else {
                     Toast.makeText(contexto, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
                 }
+                try {
+                    fragment_contratantes.contratantes.add(new ClaseContratante(nombre.getText().toString(),contacto.getText().toString(),identificacion.getText().toString(),false));
+                    Toast.makeText(contexto,"Creado",Toast.LENGTH_LONG).show();
+                    dialogo.dismiss();
+                }catch (RuntimeException e){
+                    Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
+                    dialogo.dismiss();
+                }
+
             }
         });
         salir.setOnClickListener(new View.OnClickListener() {

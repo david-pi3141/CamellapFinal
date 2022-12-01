@@ -39,6 +39,8 @@ public class cuadroDialogoNuevoMaterial {
                     if(!nombreMaterial.getText().toString().equals("") && !cantidad.getText().toString().equals("")) {
 
                         DbCamellap dbContactos = new DbCamellap(contexto);
+                        GalleryFragment.inventario.add(new ClaseInventario(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString())));
+
                         long id = dbContactos.insertarMaterial(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString()));
 
                         if (id > 0) {
@@ -51,7 +53,13 @@ public class cuadroDialogoNuevoMaterial {
                     } else {
                         Toast.makeText(contexto, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
                     }
-
+                    try {
+                        GalleryFragment.inventario.add(new ClaseInventario(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString())));
+                        dialogo.dismiss();
+                    }catch (RuntimeException e){
+                        Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
+                        dialogo.dismiss();
+                    }
 
 
                 }

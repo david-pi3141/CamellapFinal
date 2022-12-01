@@ -56,6 +56,13 @@ public class cuadroDialogoNuevoEvento {
                 } else {
                     Toast.makeText(contexto, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
                 }
+                try {
+                    gerente.nuevoEvento(Integer.parseInt(costo.getText().toString()), lugar.getText().toString(), tematica.getText().toString(), fecha.getText().toString());
+                    dialogo.dismiss();
+                }catch (RuntimeException e){
+                    Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
+                    dialogo.dismiss();
+                }
             }
         });
 

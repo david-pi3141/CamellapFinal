@@ -26,10 +26,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SlideshowFragment extends Fragment {
+    ArrayList<ClaseEvento> lst2 = new ArrayList<>();
 
     private FragmentFinanzasBinding binding;
     ListView ListViewPendientesPago;
-    ArrayList<ClaseEvento> lst = new ArrayList<>();
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -41,8 +42,9 @@ public class SlideshowFragment extends Fragment {
         SlideshowFragment context = this;
         ListViewPendientesPago = binding.ListViewPendientesPago;
 
-        CustomAdapterEventos adapter = new CustomAdapterEventos(this.getContext(),lst);
+        CustomAdapterEventos adapter = new CustomAdapterEventos(this.getContext(),lst2);
         ListViewPendientesPago.setAdapter(adapter);
+        lst2.clear();
 
         ListViewPendientesPago.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -57,12 +59,15 @@ public class SlideshowFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-        super.onDestroyView();
+
         for(int i= 0; i < gerente.eventos.size(); i++){
             if(gerente.eventos.get(i).getEstadoPago()){
-                lst.add(gerente.eventos.get(i));
+                lst2.add(gerente.eventos.get(i));
             }
+
         }
+
+        super.onDestroyView();
         binding = null;
     }
 }

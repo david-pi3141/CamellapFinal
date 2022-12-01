@@ -53,6 +53,13 @@ public class cuadroDialogoNuevoPersonal {
                 } else {
                     Toast.makeText(contexto, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
                 }
+                try {
+                    fragment_personal.personal.add(new ClasePersonal(nombre.getText().toString(),contacto.getText().toString(),apodo.getText().toString(),experiancia.getText().toString(),identificacion.getText().toString(),cargo.getText().toString()));
+                    dialogo.dismiss();
+                }catch (RuntimeException e){
+                    Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
+                    dialogo.dismiss();
+                }
             }
         });
         salir.setOnClickListener(new View.OnClickListener() {

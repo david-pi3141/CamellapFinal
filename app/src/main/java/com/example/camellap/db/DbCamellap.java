@@ -1,10 +1,17 @@
 package com.example.camellap.db;
 
+import static com.example.camellap.ui.MainActivity.gerente;
+
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
+
+import com.example.camellap.ViewModel.ClaseInventario;
+
+import java.util.ArrayList;
 
 public class DbCamellap extends DbHelper {
 
@@ -12,6 +19,7 @@ public class DbCamellap extends DbHelper {
 
     public DbCamellap(@Nullable Context context) {
         super(context);
+
         this.context = context;
     }
 
@@ -105,6 +113,30 @@ public class DbCamellap extends DbHelper {
         }
 
         return id;
+
+    }
+
+
+    public void  obtenerInfo() {
+
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+
+        ClaseInventario inventarios;
+        Cursor cursorInventario;
+
+        cursorInventario = db.rawQuery("SELECT * FROM " + TABLE_INVENTARIO, null);
+
+        if (cursorInventario.moveToFirst()) {
+            do {
+                inventarios = new ClaseInventario((cursorInventario.getString(1)), cursorInventario.getInt(2));
+
+                gerente.inventario.add(inventarios);
+            } while (cursorInventario.moveToNext());
+        }
+
+        cursorInventario.close();
 
     }
 }

@@ -51,7 +51,7 @@ public class cuadroMostrarEditarEvento {
                 evento.setPersonal(personalE.getText().toString());
                 evento.setInventario(inventarioE.getText().toString());
                 evento.setContratante(contratenteE.getText().toString());
-                evento.setEstadoPago(Integer.parseInt(estadoPagoE.getText().toString()));
+                evento.setEstadoPago(Boolean.parseBoolean(estadoPagoE.getText().toString()));
 
                 dialogo.dismiss();
             }

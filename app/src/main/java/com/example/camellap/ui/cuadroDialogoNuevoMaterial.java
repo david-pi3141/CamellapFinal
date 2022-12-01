@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.camellap.R;
 import com.example.camellap.ViewModel.ClaseInventario;
 import com.example.camellap.ViewModel.Gerente;
+import com.example.camellap.db.DbCamellap;
 import com.example.camellap.ui.inventario.GalleryFragment;
 import com.example.camellap.ui.inventario.GalleryViewModel;
 
@@ -34,15 +35,29 @@ public class cuadroDialogoNuevoMaterial {
             enviarInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    try {
-                        GalleryFragment.inventario.add(new ClaseInventario(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString())));
-                        dialogo.dismiss();
-                    }catch (RuntimeException e){
-                        Toast.makeText(contexto,"No se ingresaron datos completos",Toast.LENGTH_LONG).show();
-                        dialogo.dismiss();
+
+                    if(!nombreMaterial.getText().toString().equals("") && !cantidad.getText().toString().equals("")) {
+
+                        DbCamellap dbContactos = new DbCamellap(contexto);
+                        long id = dbContactos.insertarMaterial(nombreMaterial.getText().toString(), Integer.parseInt(cantidad.getText().toString()));
+
+                        if (id > 0) {
+                            Toast.makeText(contexto, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
+                            dialogo.dismiss();
+                        } else {
+                            Toast.makeText(contexto, "ERROR AL GUARDAR REGISTRO", Toast.LENGTH_LONG).show();
+                            dialogo.dismiss();
+                        }
+                    } else {
+                        Toast.makeText(contexto, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
                     }
+
+
+
                 }
             });
+
+
             salir.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

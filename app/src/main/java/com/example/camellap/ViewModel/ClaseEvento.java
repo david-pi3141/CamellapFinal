@@ -4,7 +4,7 @@ public class ClaseEvento{
 
     //atributos
     int costo;
-    int estadoPago;
+    boolean estadoPago;
     String lugar;
     String tematica;
     String fecha;
@@ -22,6 +22,7 @@ public class ClaseEvento{
         this.contratante = "Por definir";
         this.inventario = "Por definir";
         this.personal = "Por definir";
+        this.estadoPago = true;
     }
 
     //getters y setters
@@ -49,10 +50,10 @@ public class ClaseEvento{
     public void setCosto(int costo) {
         this.costo = costo;
     }
-    public int getEstadoPago() {
+    public boolean getEstadoPago() {
         return estadoPago;
     }
-    public void setEstadoPago(int estadoPago) {
+    public void setEstadoPago(boolean estadoPago) {
         this.estadoPago = estadoPago;
     }
     public String getLugar() {
